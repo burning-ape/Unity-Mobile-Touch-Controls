@@ -1,0 +1,20 @@
+{
+  "name": "com.burn1ingape.unity-mobile-touch-controlls",
+  "version": "0.0.1",
+  "displayName": "Touch Controlls",
+  "description": "Unity-Mobile-Touch-Controlls package by Burn1ngApe",
+  "unity": "2019.1",
+  "documentationUrl": "https://github.com/Burn1ngApe/Unity-Mobile-Touch-Controls",
+  "licensesUrl": "https://github.com/Burn1ngApe/Unity-Mobile-Touch-Controls/blob/main/LICENSE",
+  "keywords": [
+      "keyword1",
+      "keyword2",
+      "keyword3"
+    ],
+  "author": {
+      "name": "Burn1ngApe",
+      "email": "zuklovuk@gmail.com",
+      "url": "https://github.com/Burn1ngApe"
+    }
+  }
+  
