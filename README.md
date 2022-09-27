@@ -17,7 +17,7 @@ Unity Mobile Touch Controlls is a tool developed to help Unity developers with i
 7. Methods, used as listeners in TouchControlls event should have TouchData as argument, because TouchControlls returns TouchData varibles.
 
 ## Example
-[![Example.png](https://i.postimg.cc/ZRVNT0TK/Example.png)](https://postimg.cc/YGL0RrGJ)]
+[![Example.png](https://i.postimg.cc/ZRVNT0TK/Example.png)](https://postimg.cc/YGL0RrGJ)
 
 # Touch Events
 ## OnTapEvent
