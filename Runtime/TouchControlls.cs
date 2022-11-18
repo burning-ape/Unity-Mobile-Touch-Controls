@@ -1,20 +1,30 @@
+using UnityEngine;
+
 namespace BurningApe.Touch
 {
-    public class TouchControlls
+    public class TouchControlls : MonoBehaviour
     {
-        private TouchEvents _touchEvents;
+        public TouchData TouchData;
+        private TouchDetector _touchDetector;
 
         public TouchEvent OnTapEvent = new TouchEvent();
+        public TouchEvent OnDoubleTapEvent = new TouchEvent();
         public TouchEvent OnSwipeEvent = new TouchEvent();
         public TouchEvent OnTouchMadeEvent = new TouchEvent();
         public TouchEvent OnTouchEndEvent = new TouchEvent();
-        public TouchEvent OnSwipeOnceEvent = new TouchEvent();
-
-        public TouchControlls(TouchData data) => _touchEvents = new TouchEvents(data);
 
 
-        public void Run() => _touchEvents
-            .OnTouchEvent(OnTapEvent, OnSwipeEvent, OnTouchMadeEvent, OnTouchEndEvent, OnSwipeOnceEvent);
+        private void Awake() => _touchDetector = new(TouchData);
 
+
+        public void Update()
+        {
+            _touchDetector
+                .DetectTouch(OnTapEvent, OnDoubleTapEvent, OnSwipeEvent, OnTouchMadeEvent, OnTouchEndEvent,
+                TouchData.RunInFixedUpdate, TouchData.AmountOfTouches);
+        }
+
+
+        public void FixedUpdate() { if (TouchData.RunInFixedUpdate) TouchToFixedConverter.InvokeFixedEvent(); }
     }
 }
